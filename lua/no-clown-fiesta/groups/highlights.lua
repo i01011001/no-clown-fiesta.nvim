@@ -140,5 +140,3 @@ function M.highlight(palette, opts)
     FloatBorder = { fg = palette.light_gray },
   }
 end
-
-r
