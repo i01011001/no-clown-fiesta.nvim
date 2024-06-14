@@ -21,9 +21,9 @@ function M.highlight(palette, opts)
       fg = palette.fg,
       bg = opts.transparent and palette.none or palette.bg,
     },
-    Pmenu = { fg = palette.light_gray, bg = palette.accent },
-    PmenuSel = { fg = palette.blue, bg = palette.alt_bg },
-    WildMenu = { fg = palette.blue, bg = palette.alt_bg },
+    Pmenu = { fg = palette.light_gray, bg = palette.bg },
+    PmenuSel = { fg = palette.blue, bg = palette.accent },
+    WildMenu = { fg = palette.blue, bg = palette.bg },
     CursorLineNr = {
       fg = palette.light_gray,
       bold = true,
@@ -33,13 +33,13 @@ function M.highlight(palette, opts)
       { fg = palette.medium_gray },
       opts.styles.comments
     ),
-    Folded = { fg = palette.light_gray, bg = palette.alt_bg },
-    FoldColumn = { fg = palette.light_gray, bg = palette.alt_bg },
+    Folded = { fg = palette.light_gray--[[ , bg = palette.alt_bg ]] },
+    FoldColumn = { fg = palette.light_gray--[[ , bg = palette.alt_bg ]] },
     LineNr = { fg = palette.gray },
     Whitespace = { fg = palette.gray },
     VertSplit = { fg = palette.bg, bg = palette.accent },
     CursorLine = {
-      bg = palette.alt_bg,
+      bg = palette.accent,
     },
     CursorColumn = { bg = palette.alt_bg },
     ColorColumn = { bg = palette.alt_bg },
@@ -59,14 +59,14 @@ function M.highlight(palette, opts)
     QuickFixLine = { bg = palette.accent },
     PmenuSbar = { bg = palette.alt_bg },
     PmenuThumb = { bg = palette.light_gray },
-    MatchWord = { underline = true },
+    MatchWord = { fg = palette.orange },
     MatchParen = vim.tbl_extend(
       "force",
-      { fg = palette.blue, bg = palette.bg, underline = true },
+      { fg = palette.orange, bg = palette.bg, underline = false },
       opts.styles.match_paren
     ),
-    MatchWordCur = { underline = true },
-    MatchParenCur = { underline = true },
+    MatchWordCur = { fg = palette.orange },
+    MatchParenCur = { fg = palette.orange },
     Cursor = { fg = palette.cursor_fg, bg = palette.cursor_bg },
     lCursor = { fg = palette.cursor_fg, bg = palette.cursor_bg },
     CursorIM = { fg = palette.cursor_fg, bg = palette.cursor_bg },
@@ -141,4 +141,4 @@ function M.highlight(palette, opts)
   }
 end
 
-return M
+r
