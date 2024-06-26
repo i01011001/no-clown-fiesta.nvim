@@ -9,14 +9,14 @@ NotifyDEBUGBorder={ fg=palette.medium_gray },
 NotifyTRACEBorder={ fg=palette.medium_gray },
 NotifyERRORIcon  ={ fg=palette.red },
 NotifyWARNIcon   ={ fg=palette.orange},
-NotifyINFOIcon   ={ fg=palette.green },
-NotifyDEBUGIcon  ={ fg=palette.cyan },
-NotifyTRACEIcon  ={ fg=palette.cyan },
+NotifyINFOIcon   ={ fg=palette.cyan },
+NotifyDEBUGIcon  ={ fg=palette.yellow },
+NotifyTRACEIcon  ={ fg=palette.light_gray },
 NotifyERRORTitle ={ fg=palette.red },
 NotifyWARNTitle  ={ fg=palette.orange },
 NotifyINFOTitle  ={ fg=palette.green },
 NotifyDEBUGTitle ={ fg=palette.yellow },
-NotifyTRACETitle ={ fg=palette.cyan },
+NotifyTRACETitle ={ fg=palette.light_gray },
   }
 end
 
