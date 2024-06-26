@@ -14,7 +14,7 @@ NotifyDEBUGIcon  ={ fg=palette.yellow },
 NotifyTRACEIcon  ={ fg=palette.light_gray },
 NotifyERRORTitle ={ fg=palette.red },
 NotifyWARNTitle  ={ fg=palette.orange },
-NotifyINFOTitle  ={ fg=palette.green },
+NotifyINFOTitle  ={ fg=palette.cyan },
 NotifyDEBUGTitle ={ fg=palette.yellow },
 NotifyTRACETitle ={ fg=palette.light_gray },
   }
