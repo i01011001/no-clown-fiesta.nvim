@@ -35,7 +35,7 @@ function M.highlight(palette, opts)
     ),
     LspSignatureActiveParameter = { bg = palette.alt_bg, bold = true },
     LspCodeLens = { fg = palette.comment },
-    LspInlayHint = { bg = palette.hint },
+    LspInlayHint = { fg = palette.medium_grey, bg = palette.bg },
     LspInfoBoarder = { fg = palette.light_gray, bg = palette.hint },
   }
 end
