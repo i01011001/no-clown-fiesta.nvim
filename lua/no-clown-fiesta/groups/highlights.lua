@@ -4,26 +4,26 @@ function M.highlight(palette, opts)
   return {
     Normal = {
       fg = palette.fg,
-      bg = opts.transparent and palette.none or palette.bg,
+      bg = opts.transparent and palette.none or palette.none,
     },
-    SignColumn = { bg = opts.transparent and palette.none or palette.bg },
+    SignColumn = { bg = opts.transparent and palette.none or palette.none },
     MsgArea = {
       fg = palette.fg,
-      bg = opts.transparent and palette.none or palette.bg,
+      bg = opts.transparent and palette.none or palette.none,
     },
-    ModeMsg = { fg = palette.fg, bg = palette.bg },
-    MsgSeparator = { fg = palette.fg, bg = palette.bg },
+    ModeMsg = { fg = palette.fg, bg = palette.none },
+    MsgSeparator = { fg = palette.fg, bg = palette.none },
     SpellBad = { sp = palette.error, undercurl = true },
     SpellCap = { sp = palette.yellow, undercurl = true },
     SpellLocal = { sp = palette.sign_add, undercurl = true },
     SpellRare = { sp = palette.purple, undercurl = true },
     NormalNC = {
       fg = palette.fg,
-      bg = opts.transparent and palette.none or palette.bg,
+      bg = opts.transparent and palette.none or palette.none,
     },
-    Pmenu = { fg = palette.light_gray, bg = palette.bg },
+    Pmenu = { fg = palette.light_gray, bg = palette.none },
     PmenuSel = { fg = palette.blue, bg = palette.accent },
-    WildMenu = { fg = palette.blue, bg = palette.bg },
+    WildMenu = { fg = palette.blue, bg = palette.none },
     CursorLineNr = {
       fg = palette.light_gray,
       bold = true,
@@ -37,7 +37,7 @@ function M.highlight(palette, opts)
     FoldColumn = { fg = palette.light_gray--[[ , bg = palette.alt_bg ]] },
     LineNr = { fg = palette.gray },
     Whitespace = { fg = palette.gray },
-    VertSplit = { fg = palette.bg, bg = palette.accent },
+    VertSplit = { fg = palette.none, bg = palette.accent },
     CursorLine = {
       bg = palette.accent,
     },
@@ -48,7 +48,7 @@ function M.highlight(palette, opts)
     },
     Visual = { bg = palette.gray },
     VisualNOS = { bg = palette.alt_bg },
-    WarningMsg = { fg = palette.error, bg = palette.bg },
+    WarningMsg = { fg = palette.error, bg = palette.none },
     DiffAdd = { bg = palette.accent_green },
     DiffText = { bg = palette.accent_blue },
     DiffChange = {
@@ -62,7 +62,7 @@ function M.highlight(palette, opts)
     MatchWord = { fg = palette.orange },
     MatchParen = vim.tbl_extend(
       "force",
-      { fg = palette.orange, bg = palette.bg, underline = false },
+      { fg = palette.orange, bg = palette.none, underline = false },
       opts.styles.match_paren
     ),
     MatchWordCur = { fg = palette.orange },
@@ -83,7 +83,7 @@ function M.highlight(palette, opts)
     Directory = { fg = palette.blue },
     SpecialKey = { fg = palette.blue },
     Title = { fg = palette.blue },
-    ErrorMsg = { fg = palette.error, bg = palette.bg, bold = true },
+    ErrorMsg = { fg = palette.error, bg = palette.none, bold = true },
     Search = { fg = palette.orange, bg = palette.alt_bg },
     IncSearch = { fg = palette.alt_bg, bg = palette.orange },
     Substitute = { fg = palette.alt_bg, bg = palette.orange },
@@ -129,16 +129,17 @@ function M.highlight(palette, opts)
     Underlined = { underline = true },
     Bold = { bold = true },
     Italic = { italic = true },
-    Ignore = { fg = palette.cyan, bg = palette.bg, bold = true },
-    Todo = { fg = palette.red, bg = palette.bg, bold = true },
-    Error = { fg = palette.error, bg = palette.bg, bold = true },
+    Ignore = { fg = palette.cyan, bg = palette.none, bold = true },
+    Todo = { fg = palette.red, bg = palette.none, bold = true },
+    Error = { fg = palette.error, bg = palette.none, bold = true },
     TabLine = { fg = palette.gray, bg = palette.alt_bg },
     TabLineSel = { fg = palette.white, bg = palette.alt_bg },
     TabLineFill = { fg = palette.white, bg = palette.alt_bg },
-    WinSeparator = { fg = palette.medium_gray, bg = palette.bg },
+    WinSeparator = { fg = palette.medium_gray, bg = palette.none },
     DiagnosticFloatingError = { fg = palette.error },
     FloatBorder = { fg = palette.light_gray },
   }
 end
 
 return M
+
